@@ -73,6 +73,8 @@ void didChangeDependencies(){
 void didPopNext(){
     setState(() {
       time=10;
+      correctAnswers=0;
+      totalPoints=0;
     });
     Time();
 }
