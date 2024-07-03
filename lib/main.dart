@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> with RouteAware {
   Timer? timer;
   @override
   void initState() {
-    // TODO: implement initState
+
     super.initState();
     _generateOptions();
     Time();
@@ -129,7 +129,7 @@ void didPopNext(){
         title: Padding(padding: EdgeInsets.symmetric(horizontal: 10),
         child:Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [Text("Quiz app"),Text("$time")],
+          children: [Text("Quiz app"),Text("Time Left: $time")],
         )),
       ),
       body: Center(
