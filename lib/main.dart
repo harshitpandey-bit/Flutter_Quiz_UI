@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> with RouteAware {
   bool isButtonEnabled = true;
   int correctAnswers = 0;
   int totalPoints = 0;
-  int time = 10;
+  int time = 20;
   Timer? timer;
   @override
   void initState() {
@@ -89,7 +89,8 @@ void didPopNext(){
 
       if (time == 0) {
         timer?.cancel();
-       Navigator.push(context,MaterialPageRoute(builder: (context) => ScoreboardPage(),) );
+       Navigator.push(context,MaterialPageRoute(builder: (context) => ScoreboardPage(correctAnswers: correctAnswers,
+         totalPoints: totalPoints,),) );
 
       }
     });

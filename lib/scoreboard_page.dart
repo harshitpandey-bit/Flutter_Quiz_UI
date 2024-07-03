@@ -2,7 +2,9 @@
 import 'package:flutter/material.dart';
 
 class ScoreboardPage extends StatelessWidget {
-  const ScoreboardPage({super.key});
+  int correctAnswers=0;
+  int totalPoints=0;
+   ScoreboardPage({super.key,required this.correctAnswers,required this.totalPoints});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +12,15 @@ class ScoreboardPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Scoreboard"),
       ),
-      body:Center(child:Text("ScoreBoard"))
+      body:Center(child:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+        Text("Total Score: $totalPoints",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+        Text("Correct Answer: $correctAnswers",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+
+      ]
+
+      ))
         ,floatingActionButton: ElevatedButton(onPressed: (){
           Navigator.pop(context);
     },child:
