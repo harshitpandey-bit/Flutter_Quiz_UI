@@ -72,7 +72,7 @@ void didChangeDependencies(){
 @override
 void didPopNext(){
     setState(() {
-      time=10;
+      time=20;
       correctAnswers=0;
       totalPoints=0;
     });
